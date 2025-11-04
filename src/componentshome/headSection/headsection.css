@@ -1,147 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=PT+Serif:wght@400;700&display=swap');
-
-*{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-.Hero_Section{
-  background-color: #101010;
+.intro {
+  height: 100vh;
   display: flex;
-
-}
-
-.Left_Section{
-  margin-top: 10vh;
-  padding-top: 5px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
-
-}
-.Left_Section p{
-  padding-top: 20px;
-  font-size: 28px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 40px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
-.Right_Section{
-  width: 30%;
-  height: auto;
-  padding-top: 50px;
-  padding-left: 10px;
-  padding-bottom: 100px;
-  flex: 1;
-  margin-left: 5vw;
-}
-.Right_Section img{
-  width: 70vh;
-  height: 70vh;
-  border-radius: 5px;
-}
-h2{
-  margin-top: 8%;
-  margin-left: 10%;
-  margin-bottom: 1%;
-}
-
-p{
-  margin-top: 1px;
-  margin-left: 10%;
-
-}
-
-.Second_h2{
-  margin-top: 14%;
-  /* padding-left: 30px ; */
-  /* margin-bottom: 1%; */
-  font-family:'Inter', sans-serif;
-  font-size: 25px;
-  /* margin-left: 18%; */
-}
-
-.logos{
-  width: 35px;
-  margin: 20px 20px;
-  cursor: pointer;
-  color: azure;
-  
-}
-
-.icons
-{
-  /* margin-top: 20px; */
-  margin-left: 60px;
-}
-
-
-.First_Image{
-margin-left: 18%;
-padding-top: 2px;
-margin-top: 1%;
-}
-
-.Lower_Section{
-  background-color: #001d3d;
-  color: azure;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 30px;
-  font-size:x-large;
-  font-weight:bolder;
-  flex: 1;
-}
-.Lower_Section .vertical-line{
-  border-right: 3px solid white;
-  border-left: 3px solid white;
-  padding: 0 90px; 
-  height: 40px;
-}
-
-.EU{
-  border: 3px;
-  border-left: white;
-  
-}
-
-@media (max-width: 600px) {
-
-  .Hero_Section {
-    flex-direction: column; /* Stack the sections on small devices */
-  }
-  .Lower_Section {
-      flex-direction: column; 
-      align-items: center; 
-      text-align: center; 
-      padding: 15px; 
-      border: none;
-      font-size: large; /* Adjust font size for smaller screens */
-  }
-  .Lower_Section ul {
-    position: relative;
-    border: none;
-    margin: 5px; /* Adjust margin for spacing between items */
-    padding: 20px 20px; /* Adjust padding for spacing between text and line */
-   
-}
-.Lower_Section .vertical-line{
-  border: none;
-  padding: 0 90px; 
-  height: 40px;
-}
-
-.Lower_Section ul::after {
+.intro::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 2px solid white;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.25), transparent 70%);
+  top: -100px;
+  left: -100px;
+  filter: blur(60px);
+  z-index: 0;
+  animation: float 8s ease-in-out infinite alternate;
 }
-.Right_Section img{
-  margin-left: 10vh;
-  width: 30vh;
-  height: 30vh;
+
+.intro-content {
+  z-index: 1;
+  max-width: 700px;
+  padding: 0 1rem;
+  animation: fadeIn 1.2s ease-in-out;
 }
+
+.intro-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.intro-title span {
+  color: #33cbea;
+}
+
+.intro-subtitle {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #cbd5e1;
+}
+
+.intro-button {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: #33cbea;
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.intro-button:hover {
+  background-color: #16a7d3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(51, 203, 234, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-title {
+    font-size: 2.4rem;
+  }
+
+  .intro-subtitle {
+    font-size: 1rem;
+  }
 }
