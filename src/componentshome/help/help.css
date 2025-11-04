@@ -1,92 +1,137 @@
-.container{
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    background-color: #001d3d;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
-.help-heading{
-    text-align: center;
-    font-weight: 700;
-    color: #F4F0EC;
-    font-size: 30px;
-    line-height: 24px;
-    letter-spacing: 2px;
-    font-family: 'PT Serif', serif;
-    margin: 20px;
+.help-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+    font-family: "Inter", sans-serif;
 }
 
-.help{
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    justify-content: space-around;
-    align-items: center;
-    margin: 25px;
-    padding: 20px;
+.help-inner {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(145deg, #071952, #001d3d);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(51, 203, 234, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-
-.sub-heading{
-    font-size: 24px;
-    font-family:'Lato', sans-serif ;
+.help-inner:hover {
+  box-shadow: 0 12px 35px rgba(51, 203, 234, 0.25);
+  transform: translateY(-5px);
 }
 
-.help-para{
-    text-align: center;
-    padding: 0 30px;
-    color: #E5E4E2;
-    line-height: 24px;
-    font-weight: 400;
-    font-size: 17px;
-    font-family:'Montserrat', sans-serif;
-    /* font-family: 'Lato', sans-serif; */
-    letter-spacing: 1px;
+/* Heading */
+.help-heading {
+  text-align: center;
+  font-weight: 700;
+  color: #F4F0EC;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-family: 'PT Serif', serif;
+  margin-bottom: 40px;
 }
 
-.link{
-    color: #3282B8;
-    text-decoration: none;
-}
-.link:hover{
-    color: #BBE1FA;
+/* boxes container */
+.help {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
 }
 
+/* Individual Help Boxes */
+.help-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 29, 61, 0.3);
+  padding: 30px 25px;
+  flex: 1 1 300px;
+  max-width: 360px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
 
-/* Update the existing CSS for smaller screens */
+.help-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(51, 203, 234, 0.25);
+}
+
+.sub-heading {
+  font-size: 22px;
+  font-family: 'Lato', sans-serif;
+  color: #33cbea;
+  margin-bottom: 12px;
+}
+
+.help-para {
+  color: #E5E4E2;
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.link {
+  color: #33cbea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #16a7d3;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      height: 100vh;
-    }
-    .heading-name{
-    font-size: 30px;
+  .help-section {
+    width: 95%;
+    margin: 40px auto;
   }
-    .help-heading {
-      font-size: 24px;
-    }
-  
-    .help {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .help-para {
-      padding:0 20px 20px 20px;
-    }
+
+  .help-inner {
+    padding: 40px 15px;
   }
-  
-  /* Additional CSS for even smaller screens */
-  @media (max-width: 436px) {
-    .container{
-      margin-top: 0;
-      height: 160vh;
-    }
-    .help-para {
-      font-size: 16px;
-    }
+
+  .help {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .help-box {
+    max-width: 90%;
+  }
+
+  .help-heading {
+    font-size: 26px;
+  }
+
+  .sub-heading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 436px) {
+  .help-box {
+    padding: 25px 15px;
+  }
+
+  .help-para {
+    font-size: 15px;
+  }
+}

@@ -4,7 +4,6 @@
 
 
 .risk {
-    background-color: #001d3d;
     max-height: 140vh;
 }
 .riskwarning {
@@ -18,7 +17,7 @@
     width: 90%; 
     padding: 30px;
     margin-top: 20vh; 
-    background-color: #010b25;
+    background-color: #041b47;
     border: 1px solid #010b25; 
     text-align: center; 
     height: 80vh;

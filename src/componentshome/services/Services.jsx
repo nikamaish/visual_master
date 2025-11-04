@@ -8,9 +8,7 @@ const Subscription = () => {
       <div className="rectangular-container">
 
       <div className="top-heading">
-      <div className='heading'>
         <h1>Our Services</h1>
-      </div>
       </div>
 
     <div className="sectionss">
