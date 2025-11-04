@@ -31,7 +31,7 @@ const App = () => {
         <Route path="/cryptoweek" element={<CryptoWeek />} />
         <Route path="/cryptomonth" element={<CryptoMonths />} />
         <Route path="/cryptothreemonths" element={<CryptoThreeMonths/>} />
-        <Route path="/ai" element={<Ai/>} />
+        {/* <Route path="/ai" element={<Ai/>} /> */}
 
         </Routes>
 

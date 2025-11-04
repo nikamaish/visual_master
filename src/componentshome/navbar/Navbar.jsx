@@ -26,7 +26,7 @@ const Navbar = () => {
             </li>
     
             <li>
-              <Link to="/ai">Chankya AI</Link>
+              {/* <Link to="/ai">Chankya AI</Link> */}
             </li>
             <li>
               <Link to="/about">About Us</Link>
