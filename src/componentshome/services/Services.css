@@ -1,6 +1,6 @@
 /* Styles for larger screens */
 .subscription {
-  background-color: #001d3d;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   display: flex;
   justify-content: center;
   align-items: center;
